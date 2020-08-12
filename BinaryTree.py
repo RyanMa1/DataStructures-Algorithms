@@ -34,6 +34,8 @@ class BinaryTree(object):
     def preorder_print(self, start, traversal):
         """Helper method - use this to create a 
         recursive print solution."""
+        #important to have recursion return something if you're trying to keep a member saved 
+        #in every return call
         if start != None:
             traversal += str(start.value)
             traversal = self.preorder_print(start.left, traversal)
